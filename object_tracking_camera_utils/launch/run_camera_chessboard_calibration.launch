@@ -8,7 +8,7 @@
 
 
     <node name="calib" pkg="camera_calibration" type="cameracalibrator.py"
-    args="--size $(arg size)
+    args="--size $(arg board_size)
           --square $(arg square_size)
           --pattern=chessboard
           --no-service-check
