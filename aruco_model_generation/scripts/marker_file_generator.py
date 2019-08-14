@@ -44,7 +44,8 @@ def draw_labels(img, id):
 
 
 def flip_image(img):
-    out = cv2.flip(img, 1)
+    #out = cv2.flip(img, 1)
+    out = img
     return out
 
 def write_material_script(id, script_dir):
