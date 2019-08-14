@@ -36,8 +36,8 @@ def process_base_image(img, id):
 def draw_labels(img, id):
     size = img.shape[0]
 
-    text_shade_main = 100
-    text_shade_other = 40
+    text_shade_main = 150
+    text_shade_other = 60
     text_green = (text_shade_other, text_shade_main, text_shade_other)
     text_red = (text_shade_other, text_shade_other, text_shade_main)
     text_blue = (text_shade_main, text_shade_other, text_shade_other)
