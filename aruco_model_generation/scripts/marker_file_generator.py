@@ -7,9 +7,25 @@ import numpy as np
 
 
 def create_aruco_marker(id, ar_dict):
-    px_size = 100
-    border_size = 2
-    return ar.drawMarker(ar_dict, id, px_size, None, border_size)
+    px_size = 128
+    border_size = 1
+    img = ar.drawMarker(ar_dict, id, px_size, None, border_size)
+
+    ringsize=1
+    bordersize=12
+    img=cv2.copyMakeBorder(img, top=ringsize,
+                                  bottom=ringsize,
+                                  left=ringsize,
+                                  right=ringsize,
+                                  borderType= cv2.BORDER_CONSTANT,
+                                  value=[256,256,256] )
+    img=cv2.copyMakeBorder(img, top=bordersize,
+                                  bottom=bordersize,
+                                  left=bordersize,
+                                  right=bordersize,
+                                  borderType= cv2.BORDER_CONSTANT,
+                                  value=[0,0,0] )
+    return img
 
 def process_base_image(img, id):
     a = flip_image(img)
