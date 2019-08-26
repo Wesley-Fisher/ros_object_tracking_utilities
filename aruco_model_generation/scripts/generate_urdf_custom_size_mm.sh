@@ -15,5 +15,5 @@ for id in $(seq 0 249)
 do
     echo $id
     sizem=`echo $size \\* $mm_to_m | bc`
-    rosrun xacro xacro.py -o "$urdf_out_dir/aruco_$size""mm_$id.urdf" "$urdf_common_dir/aruco_robot.urdf.xacro" size:=$sizem id:=$id
+    rosrun xacro xacro --inorder -o "$urdf_out_dir/aruco_$size""mm_$id.urdf" "$urdf_common_dir/aruco_robot.urdf.xacro" size:=$sizem id:=$id
 done
