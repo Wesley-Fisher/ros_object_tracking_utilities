@@ -11,8 +11,8 @@ def create_aruco_marker(id, ar_dict):
     border_size = 1
     img = ar.drawMarker(ar_dict, id, px_size, None, border_size)
 
-    ringsize=1
-    bordersize=12
+    ringsize=16 #seems for single markers its good to have white border at least as big as black border: https://answers.opencv.org/question/196297/aruco-markers-white-margin/
+    bordersize=1
     img=cv2.copyMakeBorder(img, top=ringsize,
                                   bottom=ringsize,
                                   left=ringsize,
