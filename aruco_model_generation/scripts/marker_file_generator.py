@@ -54,7 +54,7 @@ def draw_labels(img, id):
 
     cv2.putText(img, '(R)X v', ((size/2),size-text_height_est), cv2.FONT_HERSHEY_PLAIN, text_scale, text_red, text_thick, cv2.LINE_AA)
 
-    cv2.putText(img, 'ID: ' + str(id), (2,size-text_height_est), cv2.FONT_HERSHEY_PLAIN, text_scale, text_grey, text_thick, cv2.LINE_AA)
+    cv2.putText(img, 'ID: ' + str(id) + ',  Size(mm): (    )', (20,size-text_height_est), cv2.FONT_HERSHEY_PLAIN, text_scale, text_grey, text_thick, cv2.LINE_AA)
     return img
 
 
